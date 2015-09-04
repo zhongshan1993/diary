@@ -1,4 +1,6 @@
 # 运用DIV拖拽实现resize和碰撞检测 #
+
+
 ### Div由拖拽改变大小 ###
 [演示demo](http://zhongshan1993.github.io/myDemo/singlePage/drag-changeDivSize.html)
 
