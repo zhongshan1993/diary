@@ -1,5 +1,6 @@
 # 类似windows的loading动画 #
 
+(点这里查看DEMO)[http://zhongshan1993.github.io/myDemo/css3Loading/03.html]
 ```
 
 <!DOCTYPE html>
