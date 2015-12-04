@@ -1,5 +1,7 @@
 # border-radius详解 # 
 
+[查看demo](http://zhongshan1993.github.io/myDemo/css3Comprehensive/border-radius.html)
+
 `border-radius`：如果"/"反斜杠符存在，"/"前面的值是设置元素圆角的水平方向半径，"/"后面的值是设置元素圆角的垂直方向的半径；
 
 另外四个值是按照`top-left`、`top-right`、`bottom-right`、`bottom-left`顺序来设置的。
