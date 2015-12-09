@@ -1014,4 +1014,68 @@ body .markdown-body
     page-break-after: avoid;
   }
 }
-</style><title>2015-12-08(开始认真学AngularJs)</title></head><body><article class="markdown-body"><h1 id="angularjs"><a name="user-content-angularjs" href="#angularjs" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>开始认真学AngularJs</h1></article></body></html>
+</style><title>2015-12-09(AngularJs实现双向绑定)</title></head><body><article class="markdown-body"><h1 id="angularjs"><a name="user-content-angularjs" href="#angularjs" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>AngularJs实现双向绑定</h1>
+<p>AngularJS可以通过ng-model实现双向绑定，在表单场景中，省去了使用jQuery时必须手动收集每个字段的繁琐，这一功能尤为出色。</p>
+<p>以下为一个小DEMO</p>
+<p><strong>index.html</strong></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html ng-app=&quot;UserInfoModule&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;link href=&quot;http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class=&quot;panel panel-primary&quot;&gt;
+        &lt;div class=&quot;panel-heading&quot;&gt;
+            &lt;div class=&quot;panel-title&quot;&gt;双向数据绑定&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;panel-body&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-12&quot;&gt;
+                    &lt;form action=&quot;&quot; class=&quot;form-horizontal&quot; role=&quot;form&quot; ng-controller=&quot;UserInfoCtrl&quot;&gt;
+                        &lt;div class=&quot;form-group&quot;&gt;
+                            &lt;label class=&quot;col-md-2 control-label&quot;&gt;
+                                邮箱： 
+                            &lt;/label&gt;
+                            &lt;div class=&quot;col-md-10&quot;&gt;
+                                &lt;input type=&quot;email&quot; class=&quot;form-control&quot; placeholder=&quot;推荐使用126邮箱&quot; ng-model=&quot;userInfo.email&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;form-group&quot;&gt;
+                            &lt;label class=&quot;col-md-2 control-label&quot;&gt;
+                                密码：
+                            &lt;/label&gt;
+                            &lt;div class=&quot;col-md-10&quot;&gt;
+                                &lt;input type=&quot;password&quot; class=&quot;form-control&quot; placeholder=&quot;只能是数字、字母、下划线&quot; ng-model=&quot;userInfo.password&quot;&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;form-group&quot;&gt;
+                            &lt;div class=&quot;col-md-offset-2 col-md-10&quot;&gt;
+                                &lt;div class=&quot;checkbox&quot;&gt;
+                                    &lt;label&gt;
+                                        &lt;input type=&quot;checkbox&quot; ng-model=&quot;userInfo.autoLogin&quot;&gt;自动登录
+                                    &lt;/label&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;form-group&quot;&gt;
+                            &lt;div class=&quot;col-md-offset-2 col-md-10&quot;&gt;
+                                &lt;button class=&quot;btn btn-default&quot; ng-click=&quot;getFormData()&quot;&gt;获取Form表单的值&lt;/button&gt;
+                                &lt;button class=&quot;btn btn-default&quot; ng-click=&quot;setFormData()&quot;&gt;设置Form表单的值&lt;/button&gt;
+                                &lt;button class=&quot;btn btn-default&quot; ng-click=&quot;resetFormData()&quot;&gt;重置Form表单的值&lt;/button&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script src=&quot;http://apps.bdimg.com/libs/angular.js/1.3.1/angular.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;form.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre></article></body></html>
