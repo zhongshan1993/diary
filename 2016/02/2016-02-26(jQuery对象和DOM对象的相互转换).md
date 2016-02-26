@@ -1,4 +1,4 @@
-# jQuery对象和DOM对象的相互转换  # 
+# jQuery对象和DOM对象的相互转换  #
 
 ## 把jQuery对象转换为DOM对象 ##
 
